@@ -1,0 +1,26 @@
+#include <stdio.h>
+int main()
+{
+    int n,i,arr[100];
+    printf("\n Enter the num of elements in an array");
+    scanf("%d",&n);
+    printf("\n Enter the array elements");
+    for(int i=0;i<n;i++)
+    {
+        scanf("%d",&arr[i]);
+    }
+    int x=arr[n-1];
+     
+    for(i=n-1;i>0;i--)
+    {
+        arr[i]=arr[i-1];
+       
+    }
+     arr[0]=x;
+    printf("\n The array after rotation");
+    for(i=0;i<n;i++)
+    {
+        printf("%d",arr[i]);
+    }
+    return 0;
+}
